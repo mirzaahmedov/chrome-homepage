@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.keyboard__key {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  width: 3em;
+  height: 3em;
+  color: #6f6f6f;
+  background: #f1f1f1;
+  box-shadow: 5px 5px 0 #eaeaea;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.keyboard__key.active {
+  background: #e1e1e1;
+  box-shadow: 2px 2px 0 #eaeaea;
+  trasition: all 0.1s ease-in-out;
+}
+
+.edit__btn {
+  position: absolute;
+}
+.create__form {
+  position: absolute;
+  padding: 20px;
+  background: white;
+  box-shadow: 10px 5px 15px #00000044;
+  display: none;
+}
+.create__form button,
+.create__form input {
+  font: inherit;
+  line-height: 2em;
+}
+.create__form.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
